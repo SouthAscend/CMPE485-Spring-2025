@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 21656576}
   - component: {fileID: 21656581}
   m_Layer: 0
-  m_Name: 2.2 2.3 Cube
+  m_Name: 2.2 2.3 2.4 Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -271,6 +271,7 @@ MonoBehaviour:
   tags:
   - 2.2
   - 2.3
+  - 2.4
 --- !u!1 &273432337
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,7 +635,7 @@ GameObject:
   - component: {fileID: 1137857943}
   - component: {fileID: 1137857948}
   m_Layer: 0
-  m_Name: 2.2 2.3 Capsule
+  m_Name: 2.2 2.3 2.4 Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -768,6 +769,7 @@ MonoBehaviour:
   tags:
   - 2.2
   - 2.3
+  - 2.4
 --- !u!1 &1360823197
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,7 +1131,7 @@ GameObject:
   - component: {fileID: 1922971594}
   - component: {fileID: 1922971595}
   m_Layer: 0
-  m_Name: 2.3 Plane
+  m_Name: 2.3 2.4 Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1244,7 +1246,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
@@ -1263,6 +1265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tags:
   - 2.3
+  - 2.4
 --- !u!1 &2084215906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,7 +1281,7 @@ GameObject:
   - component: {fileID: 2084215907}
   - component: {fileID: 2084215912}
   m_Layer: 0
-  m_Name: 2.2 2.3 Sphere
+  m_Name: 2.2 2.3 2.4 Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1412,6 +1415,7 @@ MonoBehaviour:
   tags:
   - 2.2
   - 2.3
+  - 2.4
 --- !u!1 &2141310030
 GameObject:
   m_ObjectHideFlags: 0
