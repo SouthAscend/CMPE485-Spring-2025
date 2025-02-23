@@ -12,16 +12,6 @@ public class Player : MonoBehaviour
     [SerializeField] private float maxSpeed = 5f;
     [SerializeField] private float maxAngularSpeed = 10f;
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     void FixedUpdate()
     {
         ApplyMovement();
