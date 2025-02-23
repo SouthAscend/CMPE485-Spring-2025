@@ -550,6 +550,7 @@ GameObject:
   m_Component:
   - component: {fileID: 580862367}
   - component: {fileID: 580862368}
+  - component: {fileID: 580862369}
   m_Layer: 0
   m_Name: 2.14 Pivot
   m_TagString: Untagged
@@ -586,8 +587,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1986673845}
-  pivot: {fileID: 580862367}
   rotationSpeed: 2
+--- !u!114 &580862369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580862366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62dbb693773d00944ba84df5eb03bdab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - 2.14
 --- !u!1 &848969535
 GameObject:
   m_ObjectHideFlags: 0
