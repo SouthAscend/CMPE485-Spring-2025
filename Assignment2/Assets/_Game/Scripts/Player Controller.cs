@@ -5,11 +5,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Rigidbody rb;
-    [SerializeField] private float moveForce = 10f;
-    [SerializeField] private float rotationSpeed = 50f;
+    [SerializeField] public float moveForce = 30f;
+    [SerializeField] public float rotationSpeed = 500f;
     [SerializeField] private Transform cameraTransform;
-    [SerializeField] private float maxWalkingSpeed = 3f;
-    [SerializeField] private float maxRunningSpeed = 5f;
+    [SerializeField] public float maxWalkingSpeed = 3f;
+    [SerializeField] public float maxRunningSpeed = 5f;
     [SerializeField] private Transform playerTransform;
     [SerializeField] private float lavaDamage = 1f;
     [SerializeField] private float lavaSpeedFactor = 0.5f;
