@@ -29,13 +29,13 @@ public class Health : MonoBehaviour
         }
     }
 
-    void HealPickup()
+    public void HealPickup()
     {
         currentHealth = maxHealth;
         UpdateHealthUI();
     }
 
-    void MaxHpPickup()
+    public void MaxHpPickup()
     {
         maxHealth *= 1.1f;
         currentHealth *= 1.1f;
@@ -44,7 +44,7 @@ public class Health : MonoBehaviour
         UpdateHealthUI();
     }
 
-    void Damage(float damage)
+    public void Damage(float damage)
     {
         currentHealth -= damage;
         UpdateHealthUI();
@@ -54,12 +54,12 @@ public class Health : MonoBehaviour
         }
     }
 
-    void RegenerationPickup()
+    public void RegenerationPickup()
     {
         bCanRegenerate = true;
     }
 
-    void BoostRegeneration()
+    public void BoostRegeneration()
     {
         regenerationFactor *= 1.05f;
     }
