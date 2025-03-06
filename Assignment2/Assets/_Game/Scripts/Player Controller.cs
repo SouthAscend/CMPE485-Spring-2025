@@ -8,14 +8,22 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float moveForce = 10f;
     [SerializeField] private float rotationSpeed = 50f;
     [SerializeField] private Transform cameraTransform;
-    [SerializeField] private float maxSpeed = 5f;
+    [SerializeField] private float maxWalkingSpeed = 3f;
+    [SerializeField] private float maxRunningSpeed = 5f;
     [SerializeField] private Transform playerTransform;
+    [SerializeField] private float lavaDamage = 1f;
+    [SerializeField] private float lavaSpeedFactor = 0.5f;
+
+    private float maxSpeed = 3f;
+    private Health health;
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         cameraTransform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+        maxSpeed = maxWalkingSpeed;
+        health = GetComponent<Health>();
     }
 
     void FixedUpdate()
@@ -26,16 +34,16 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         ApplyRotation();
+        UpdateMaxSpeed();
     }
 
     void ApplyMovement()
     {
-        float moveX = Input.GetAxis("Horizontal"); // A (-1) / D (1)
-        float moveZ = Input.GetAxis("Vertical");   // W (1) / S (-1)
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveZ = Input.GetAxisRaw("Vertical");
         float moveY = 0f;
 
         Vector3 moveDirection = (playerTransform.forward * moveZ) + (playerTransform.right * moveX) + (playerTransform.up * moveY);
-
         moveDirection.Normalize();
 
         rb.AddForce(moveDirection * moveForce, ForceMode.Force);
@@ -43,10 +51,11 @@ public class PlayerController : MonoBehaviour
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
     }
 
+
     void ApplyRotation()
     {
-        float mouseX = Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime * 1.5f;
-        float mouseY = Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
+        float mouseX = Input.GetAxisRaw("Mouse X") * rotationSpeed * Time.deltaTime * 1.5f;
+        float mouseY = Input.GetAxisRaw("Mouse Y") * rotationSpeed * Time.deltaTime;
 
         playerTransform.Rotate(Vector3.up * mouseX);
 
@@ -55,5 +64,18 @@ public class PlayerController : MonoBehaviour
         float newXRotation = Mathf.Clamp(currentXRotation - mouseY, -20f, 30f);
 
         cameraTransform.localRotation = Quaternion.Euler(newXRotation, 0f, 0f);
+    }
+
+    void UpdateMaxSpeed()
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
+            maxSpeed = maxRunningSpeed;
+        else
+            maxSpeed = maxWalkingSpeed;
+    }
+
+    public void OnLava()
+    {
+        health.Damage(lavaDamage * Time.deltaTime * (maxRunningSpeed + lavaSpeedFactor - rb.velocity.magnitude));
     }
 }
