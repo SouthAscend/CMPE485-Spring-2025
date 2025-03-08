@@ -19,6 +19,7 @@ public class RandomizeIce : EditorWindow
     void OnEnable()
     {
         LoadMaterials();
+        CalculateRotationBounds();
     }
 
     void OnGUI()
@@ -56,24 +57,131 @@ public class RandomizeIce : EditorWindow
         }
     }
 
+    void CalculateRotationBounds()
+    {
+        float maxDeviationX = 0f, maxDeviationY = 0f, maxDeviationZ = 0f;
+
+        GameObject[] iceObjects = GameObject.FindObjectsOfType<GameObject>();
+        List<GameObject> filteredIceObjects = new List<GameObject>();
+
+        foreach (GameObject obj in iceObjects)
+        {
+            if (obj.name.StartsWith("Ice"))
+            {
+                filteredIceObjects.Add(obj);
+            }
+        }
+
+        List<Transform> allCrystals = new List<Transform>();
+
+        foreach (GameObject iceObject in filteredIceObjects)
+        {
+            foreach (Transform wallTransform in iceObject.transform)
+            {
+                if (wallTransform.name.Contains("wall"))
+                {
+                    foreach (Transform crystal in wallTransform)
+                    {
+                        allCrystals.Add(crystal);
+                    }
+                }
+            }
+        }
+
+        if (allCrystals.Count == 0)
+        {
+            return; // No crystals found, leave existing values
+        }
+
+        foreach (Transform crystal in allCrystals)
+        {
+            Vector3 originalRotation = crystal.rotation.eulerAngles;
+            Vector3 closestStandardRotation = GetClosestStandardRotation(originalRotation);
+
+            float deviationX = Mathf.Abs(originalRotation.x - closestStandardRotation.x);
+            float deviationY = Mathf.Abs(originalRotation.y - closestStandardRotation.y);
+            float deviationZ = Mathf.Abs(originalRotation.z - closestStandardRotation.z);
+
+            maxDeviationX = Mathf.Max(maxDeviationX, deviationX);
+            maxDeviationY = Mathf.Max(maxDeviationY, deviationY);
+            maxDeviationZ = Mathf.Max(maxDeviationZ, deviationZ);
+        }
+
+        // Assign max deviations to min/max (keeping the input fields intact)
+        minX = -maxDeviationX;
+        maxX = maxDeviationX;
+        minY = -maxDeviationY;
+        maxY = maxDeviationY;
+        minZ = -maxDeviationZ;
+        maxZ = maxDeviationZ;
+    }
+
+
     void LoadMaterials()
     {
         materials.Clear();
         materialProbabilities.Clear();
 
-        string path = "Assets/SineVFX/TranslucentCrystals/Resources/Materials";
+        string path = "Assets/TranslucentCrystals/Resources/Materials";
         string[] materialPaths = Directory.GetFiles(path, "*.mat", SearchOption.TopDirectoryOnly);
+        Dictionary<Material, int> materialCounts = new Dictionary<Material, int>();
 
+        // Load materials
         foreach (string matPath in materialPaths)
         {
             Material mat = AssetDatabase.LoadAssetAtPath<Material>(matPath);
             if (mat != null)
             {
                 materials.Add(mat);
-                materialProbabilities.Add(1f); // Default probability
+                materialCounts[mat] = 0; // Initialize counter
             }
         }
+
+        int totalCrystals = 0;
+
+        // Find all "Ice" objects
+        GameObject[] iceObjects = GameObject.FindObjectsOfType<GameObject>();
+        List<GameObject> filteredIceObjects = new List<GameObject>();
+
+        foreach (GameObject obj in iceObjects)
+        {
+            if (obj.name.StartsWith("Ice"))
+            {
+                filteredIceObjects.Add(obj);
+            }
+        }
+
+        // Iterate through Ice objects, Walls, and Crystals
+        foreach (GameObject iceObject in filteredIceObjects)
+        {
+            foreach (Transform wallTransform in iceObject.transform)
+            {
+                if (wallTransform.name.Contains("wall")) // Ensure it's a wall
+                {
+                    foreach (Transform crystal in wallTransform)
+                    {
+                        if (crystal.TryGetComponent(out MeshRenderer renderer))
+                        {
+                            Material crystalMat = renderer.sharedMaterial;
+                            if (crystalMat != null && materialCounts.ContainsKey(crystalMat))
+                            {
+                                materialCounts[crystalMat]++;
+                                totalCrystals++;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Assign probabilities based on usage count
+        foreach (Material mat in materials)
+        {
+            float probability = totalCrystals > 0 ? (float)materialCounts[mat] * 100f / totalCrystals : 0.001f;
+            materialProbabilities.Add(probability);
+        }
     }
+
 
     void ApplyRandomization()
     {
