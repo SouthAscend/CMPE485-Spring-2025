@@ -12,7 +12,7 @@ public class RevealBreadcrumbs : MonoBehaviour
         mr.enabled = false;
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
