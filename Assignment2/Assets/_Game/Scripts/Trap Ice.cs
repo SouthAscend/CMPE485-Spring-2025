@@ -12,10 +12,10 @@ public class TrapIce : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             yield return new WaitForSeconds(0.1f);
-            float forceMagnitude = Random.Range(3f, 10f);
+            float forceMagnitude = Random.Range(25f, 45f);
             Vector3 randomDirection = new Vector3(Random.Range(-1f, 1f), 0f, Random.Range(-1f, 1f)).normalized;
             rb.AddForce(randomDirection * forceMagnitude * 2f, ForceMode.Impulse);
-            health.Damage(forceMagnitude * 3f);
+            health.Damage(forceMagnitude * .33f);
         }
     }
 }

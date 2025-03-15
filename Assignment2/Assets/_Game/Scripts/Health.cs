@@ -47,12 +47,12 @@ public class Health : MonoBehaviour
     public void Damage(float damage)
     {
         currentHealth -= damage;
-        UpdateHealthUI();
         if (currentHealth < 0)
         {
             currentHealth = 0;
             Lose();
         }
+        UpdateHealthUI();
     }
 
     public void RegenerationPickup()

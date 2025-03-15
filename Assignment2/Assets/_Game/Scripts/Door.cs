@@ -20,6 +20,7 @@ public class Door : MonoBehaviour
                 playerController.maxRunningSpeed = iceFactor * 5f;
                 playerController.moveForce = iceFactor * 30f;
                 playerController.rotationSpeed = iceFactor * 500f;
+                rb.mass = 10f;
             }
             else
             {
@@ -27,7 +28,7 @@ public class Door : MonoBehaviour
                 playerController.maxRunningSpeed = 5f;
                 playerController.moveForce = 30f;
                 playerController.rotationSpeed = 500f;
-                rb.mass = 1;
+                rb.mass = 1f;
             }
         }
         else if (other.CompareTag("LavaDoor"))
