@@ -76,6 +76,9 @@ public class PlayerController : MonoBehaviour
 
     public void OnLava()
     {
-        health.Damage(lavaDamage * Time.deltaTime * (maxRunningSpeed + lavaSpeedFactor - rb.velocity.magnitude));
+        float damage = lavaDamage * Time.deltaTime;
+        damage += (damage * maxRunningSpeed) / Mathf.Max((lavaSpeedFactor * rb.velocity.magnitude), 0.2f);
+        damage = Mathf.Min(7.5f * Time.deltaTime, damage);
+        health.Damage(damage);
     }
 }

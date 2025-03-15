@@ -50,6 +50,7 @@ public class Health : MonoBehaviour
         UpdateHealthUI();
         if (currentHealth < 0)
         {
+            currentHealth = 0;
             Lose();
         }
     }
