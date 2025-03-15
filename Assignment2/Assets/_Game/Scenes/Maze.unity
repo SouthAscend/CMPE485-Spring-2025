@@ -62856,6 +62856,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd5d627c35a9a4a408162ae27de20530, type: 3}
+--- !u!1001 &1877572617481660216
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7142978294267870829, guid: 398f1f89828285243b34b4dda5e9fecf, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1570912425}
+    - target: {fileID: 8356547380998133635, guid: 398f1f89828285243b34b4dda5e9fecf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -36
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356547380998133635, guid: 398f1f89828285243b34b4dda5e9fecf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356547380998133635, guid: 398f1f89828285243b34b4dda5e9fecf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356547380998133635, guid: 398f1f89828285243b34b4dda5e9fecf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.0000021430415
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356547380998133635, guid: 398f1f89828285243b34b4dda5e9fecf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.0000020846965
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356547380998133635, guid: 398f1f89828285243b34b4dda5e9fecf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.96592593
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356547380998133635, guid: 398f1f89828285243b34b4dda5e9fecf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.2588186
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356547380998133635, guid: 398f1f89828285243b34b4dda5e9fecf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356547380998133635, guid: 398f1f89828285243b34b4dda5e9fecf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356547380998133635, guid: 398f1f89828285243b34b4dda5e9fecf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8697501180003945785, guid: 398f1f89828285243b34b4dda5e9fecf, type: 3}
+      propertyPath: m_Name
+      value: Lava Guard
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 398f1f89828285243b34b4dda5e9fecf, type: 3}
 --- !u!1001 &8397748023566898505
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63372,3 +63433,4 @@ SceneRoots:
   - {fileID: 411866095}
   - {fileID: 1668023131}
   - {fileID: 515766729}
+  - {fileID: 1877572617481660216}
