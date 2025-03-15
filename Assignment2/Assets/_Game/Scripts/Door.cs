@@ -30,7 +30,7 @@ public class Door : MonoBehaviour
         }
         else if (other.CompareTag("LavaDoor"))
         {
-            if (playerTransform.position.x < 10.6)
+            if (playerTransform.position.x < -10.6)
             {
                 lavaComponent.setActive(true);
             }
