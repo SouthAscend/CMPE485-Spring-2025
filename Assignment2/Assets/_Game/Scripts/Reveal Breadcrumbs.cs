@@ -12,10 +12,11 @@ public class RevealBreadcrumbs : MonoBehaviour
         mr.enabled = false;
     }
 
-    void OnTriggerEnter(Collider other)
+    IEnumerator OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            yield return new WaitForSeconds(2f);
             mr.enabled = true;
         }
     }

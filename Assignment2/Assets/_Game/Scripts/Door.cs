@@ -8,6 +8,7 @@ public class Door : MonoBehaviour
     [SerializeField] Transform playerTransform;
     [SerializeField] private float iceFactor = 2.5f;
     [SerializeField] Lava lavaComponent;
+    [SerializeField] Rigidbody rb;
 
     void OnTriggerExit(Collider other)
     {
@@ -26,6 +27,7 @@ public class Door : MonoBehaviour
                 playerController.maxRunningSpeed = 5f;
                 playerController.moveForce = 30f;
                 playerController.rotationSpeed = 500f;
+                rb.mass = 1;
             }
         }
         else if (other.CompareTag("LavaDoor"))
