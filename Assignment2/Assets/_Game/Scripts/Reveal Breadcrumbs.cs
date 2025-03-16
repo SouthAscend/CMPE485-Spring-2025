@@ -16,8 +16,12 @@ public class RevealBreadcrumbs : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            StaticVariables.bCaught = false;
             yield return new WaitForSeconds(2f);
-            mr.enabled = true;
+            if (!StaticVariables.bCaught)
+            {
+                mr.enabled = true;
+            }
         }
     }
 }
