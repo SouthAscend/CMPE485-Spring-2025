@@ -1125,7 +1125,6 @@ GameObject:
   - component: {fileID: 8494830138828970827}
   - component: {fileID: 5039975563577667708}
   - component: {fileID: 2279373613747896837}
-  - component: {fileID: 6077572146391954572}
   m_Layer: 0
   m_Name: Ice
   m_TagString: Untagged
@@ -1200,24 +1199,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6077572146391954572
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8685540290188127758}
-  m_Material: {fileID: 13400000, guid: 0fd03949eebda3649819573d7ce934d0, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
