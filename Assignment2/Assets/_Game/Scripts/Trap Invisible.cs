@@ -34,8 +34,8 @@ public class TrapInvisible : MonoBehaviour
             {
                 visibilityRate = 0f;
                 bActive = false;
-                Destroy(gameObject);
                 tp.TeleportPlayer(true);
+                Destroy(gameObject);
                 return;
             }
 
