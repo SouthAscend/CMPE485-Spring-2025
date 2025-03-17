@@ -105,6 +105,10 @@ public class PlayerController : MonoBehaviour
                 health.HealPickup();
                 break;
 
+            case "More Max HP":
+                health.MaxHpPickup();
+                break;
+
             default:
                 break;
         }       

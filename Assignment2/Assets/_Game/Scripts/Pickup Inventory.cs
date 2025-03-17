@@ -29,8 +29,8 @@ public static class PickupInventory
         else
         {
             pickups.Add(new ParentPickup(pickupType));
-            PickupInventory.UpdateUI(1, pickupType);
-            GameObject countObj = GameObject.Find($"Canvas/Image 1/Count");
+            PickupInventory.UpdateUI(pickups.Count, pickupType);
+            GameObject countObj = GameObject.Find($"Canvas/Image {pickups.Count}/Count");
             Text textComponent = countObj.GetComponent<Text>();
             textComponent.text = "1";
         }
