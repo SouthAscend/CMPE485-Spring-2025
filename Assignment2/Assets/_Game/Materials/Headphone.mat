@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: KeyHolder
+  m_Name: Headphone
   m_Shader: {fileID: -6465566751694194690, guid: d1a0629bf51b550409d74258dd73849b, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -29,7 +29,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3015
+  m_CustomRenderQueue: 3050
   stringTagMap: {}
   disabledShaderPasses:
   - DepthOnly
@@ -193,7 +193,7 @@ Material:
     - _AlphaToMask: 0
     - _BASE_COLOR_WEIGHT: 1
     - _BUILTIN_QueueControl: 0
-    - _BUILTIN_QueueOffset: 15
+    - _BUILTIN_QueueOffset: 50
     - _BUMP_MAP_STRENGTH: 0.3
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
@@ -264,7 +264,7 @@ Material:
     - _BASE_COLOR: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Base_Color: {r: 0.2254702, g: 0, b: 0.5031446, a: 1}
-    - _Color: {r: 0.015686275, g: 1, b: 1, a: 0.49411765}
+    - _Color: {r: 1, g: 1, b: 1, a: 0}
     - _ColorTint1: {r: 0.5, g: 0, b: 1, a: 0}
     - _ColorTint2: {r: 0.51890707, g: 0, b: 1, a: 0}
     - _EMISSION_COLOR: {r: 0, g: 0, b: 0, a: 0}
@@ -275,7 +275,7 @@ Material:
     - _SpecColor: {r: 0, g: 0, b: 0, a: 1}
     - _UvOffset: {r: 0, g: 0, b: 0, a: 0}
     - _UvTiling: {r: 1, g: 1, b: 0, a: 0}
-    - _emissive: {r: 0.015686275, g: 0.5019608, b: 1, a: 1}
+    - _emissive: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &213516908305678993
 MonoBehaviour:
