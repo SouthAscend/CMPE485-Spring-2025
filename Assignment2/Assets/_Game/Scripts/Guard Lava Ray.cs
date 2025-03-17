@@ -10,7 +10,7 @@ public class GuardLavaRay : MonoBehaviour
 
     void Update()
     {
-        if (bActive && rb.velocity.magnitude > 0.1f)
+        if (bActive && rb.velocity.magnitude > 0.15f)
         {
             rb.mass = 10000f;
         }
