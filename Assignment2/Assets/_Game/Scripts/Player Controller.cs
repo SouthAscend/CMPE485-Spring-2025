@@ -35,6 +35,14 @@ public class PlayerController : MonoBehaviour
     {
         ApplyRotation();
         UpdateMaxSpeed();
+
+        for (int i = 1; i <= 7; i++)
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha1 + (i - 1)))
+            {
+                ApplyPickup(i);
+            }
+        }
     }
 
     void ApplyMovement()
@@ -80,5 +88,25 @@ public class PlayerController : MonoBehaviour
         damage += (damage * maxRunningSpeed) / Mathf.Max((lavaSpeedFactor * rb.velocity.magnitude), 0.2f);
         damage = Mathf.Min(7.5f * Time.deltaTime, damage);
         health.Damage(damage);
+    }
+
+    public void ApplyPickup(int slot)
+    {
+        ParentPickup pickup = PickupInventory.GetPickup(slot);
+
+        if (pickup == null) return;
+
+        switch (pickup.pickupType)
+        {
+            case "Empty Pickup":
+                break;
+
+            case "More HP":
+                health.HealPickup();
+                break;
+
+            default:
+                break;
+        }       
     }
 }

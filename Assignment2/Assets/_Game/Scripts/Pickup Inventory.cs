@@ -73,4 +73,74 @@ public static class PickupInventory
         return sprite;
     }
 
+    public static ParentPickup GetPickup(int slot)
+    {
+        if (slot > pickups.Count) return null;
+        ParentPickup thePickup = pickups[slot-1];
+        thePickup.amount = Mathf.Max(0, thePickup.amount - 1);
+
+        GameObject widget = GameObject.Find($"Canvas/Image {slot}");
+        Image imageComp = widget.GetComponent<Image>(); 
+        GameObject count = GameObject.Find($"Canvas/Image {slot}/Count");
+        Text text = count.GetComponent<Text>();
+        
+        if (thePickup.amount == 0)
+        {
+            text.text = "0";
+            imageComp.sprite = GetSprite("Empty Pickup");
+            pickups.RemoveAt(slot-1);
+            UpdateProgress();
+        }
+        else
+        {
+            text.text = thePickup.amount + "";
+        }
+
+            return thePickup;
+    }
+
+    public static void UpdateProgress()
+    {
+        int totalSlots = 7; // Assuming 8 pickup slots
+
+        // Update UI for existing pickups
+        for (int i = 0; i < pickups.Count; i++)
+        {
+            GameObject imageObj = GameObject.Find($"Canvas/Image {i + 1}");
+            GameObject countObj = GameObject.Find($"Canvas/Image {i + 1}/Count");
+
+            if (imageObj != null && countObj != null)
+            {
+                Image imageComponent = imageObj.GetComponent<Image>();
+                Text textComponent = countObj.GetComponent<Text>();
+
+                if (imageComponent != null)
+                    imageComponent.sprite = GetSprite(pickups[i].pickupType);
+
+                if (textComponent != null)
+                    textComponent.text = pickups[i].amount.ToString();
+            }
+        }
+
+        // Clear remaining slots
+        for (int i = pickups.Count; i < totalSlots; i++)
+        {
+            GameObject imageObj = GameObject.Find($"Canvas/Image {i + 1}");
+            GameObject countObj = GameObject.Find($"Canvas/Image {i + 1}/Count");
+
+            if (imageObj != null && countObj != null)
+            {
+                Image imageComponent = imageObj.GetComponent<Image>();
+                Text textComponent = countObj.GetComponent<Text>();
+
+                if (imageComponent != null)
+                    imageComponent.sprite = GetSprite("Empty Pickup");
+
+                if (textComponent != null)
+                    textComponent.text = "";
+            }
+        }
+    }
+
+
 }
