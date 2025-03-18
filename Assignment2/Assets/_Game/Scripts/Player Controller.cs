@@ -122,6 +122,10 @@ public class PlayerController : MonoBehaviour
                 CooldownController.MorePickup();
                 break;
 
+            case "Faster Seeing":
+                CooldownController.FasterPickup();
+                break;
+
             default:
                 break;
         }       

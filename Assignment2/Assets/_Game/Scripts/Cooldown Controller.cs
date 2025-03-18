@@ -44,4 +44,9 @@ public static class CooldownController
         UpdateUI();
     }
 
+    public static void FasterPickup()
+    {
+        cdUpFactor *= 1.2f;
+    }
+
 }

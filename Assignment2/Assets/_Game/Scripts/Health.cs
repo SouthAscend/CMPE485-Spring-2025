@@ -74,4 +74,6 @@ public class Health : MonoBehaviour
         float healthRatio = currentHealth / maxHealth;
         healthBarRect.localScale = new Vector3(healthRatio, healthBarRect.localScale.y, healthBarRect.localScale.z);
     }
+    
+
 }
