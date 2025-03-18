@@ -36,8 +36,6 @@ public class Headset : MonoBehaviour
         float progressMultiplier = Mathf.Abs(endAlpha - startAlpha); // Scale elapsed time
         float elapsed = duration * (1 - progressMultiplier); // Start from scaled progress
 
-        Debug.Log(elapsed + " " + startAlpha + " " + endAlpha);
-
         while (elapsed < duration)
         {
             float alpha = Mathf.Lerp(startAlpha, endAlpha, elapsed / duration);

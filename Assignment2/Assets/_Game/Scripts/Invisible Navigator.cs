@@ -11,19 +11,11 @@ public class InvisibleNavigator : MonoBehaviour
     void Start()
     {
         Transform parent = transform.parent;
-        if (parent == null)
-        {
-            Debug.LogError("InvisibleNavigator: No parent found!");
-            return;
-        }
 
         string targetMeshName = gameObject.name + "Mesh";
         Transform targetTransform = parent.Find(targetMeshName);
 
-        if (targetTransform != null)
-            targetMesh = targetTransform.GetComponent<MeshRenderer>();
-        else
-            Debug.LogError($"InvisibleNavigator: No matching mesh found for {gameObject.name}");
+        targetMesh = targetTransform.GetComponent<MeshRenderer>();
     }
 
     void Update()
@@ -33,7 +25,6 @@ public class InvisibleNavigator : MonoBehaviour
             if (CooldownController.navigator_active) CooldownController.Drain();
             if (CooldownController.navigator_active && !isFading)
             {
-                Debug.Log(CooldownController.currentCD);
                 if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
                 fadeCoroutine = StartCoroutine(FadeVisibility(1f, 0.1f)); // Fade In
                 isFading = true;
@@ -76,7 +67,6 @@ public class InvisibleNavigator : MonoBehaviour
         if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
         fadeCoroutine = StartCoroutine(FadeVisibility(0f, 0.1f)); // Fade Out
         isFading = false;
-        Debug.Log("AAAAAA");
     }
 
     IEnumerator FadeVisibility(float endAlpha, float duration)

@@ -12,6 +12,7 @@ public class Health : MonoBehaviour
 
     private float currentHealth;
     private bool bCanRegenerate = false;
+    private bool bInvincible = false;
 
     void Start()
     {
@@ -45,6 +46,7 @@ public class Health : MonoBehaviour
 
     public void Damage(float damage)
     {
+        if (bInvincible) return;
         currentHealth -= damage;
         if (currentHealth < 0)
         {
@@ -74,6 +76,11 @@ public class Health : MonoBehaviour
         float healthRatio = currentHealth / maxHealth;
         healthBarRect.localScale = new Vector3(healthRatio, healthBarRect.localScale.y, healthBarRect.localScale.z);
     }
-    
 
+    public IEnumerator InvincibilityPickup()
+    {
+        bInvincible = true;
+        yield return new WaitForSeconds(10f);
+        bInvincible = false;
+    }
 }

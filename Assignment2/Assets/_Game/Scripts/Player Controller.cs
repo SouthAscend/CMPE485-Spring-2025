@@ -126,6 +126,10 @@ public class PlayerController : MonoBehaviour
                 CooldownController.FasterPickup();
                 break;
 
+            case "Invincible":
+                StartCoroutine(health.InvincibilityPickup());
+                break;
+            
             default:
                 break;
         }       

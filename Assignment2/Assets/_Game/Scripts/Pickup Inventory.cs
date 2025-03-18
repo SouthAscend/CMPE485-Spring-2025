@@ -40,18 +40,7 @@ public static class PickupInventory
     {
         GameObject imageObj = GameObject.Find($"Canvas/Image {slot}");
 
-        if (imageObj == null)
-        {
-            Debug.LogError($"UpdateUI: No UI element found for slot {slot}");
-            return;
-        }
-
         Image imageComponent = imageObj.GetComponent<Image>();
-        if (imageComponent == null)
-        {
-            Debug.LogError($"UpdateUI: No Image component found on {imageObj.name}");
-            return;
-        }
 
         Sprite newSprite = GetSprite(pickupType);
         if (newSprite != null)
@@ -64,11 +53,6 @@ public static class PickupInventory
     {
         string path = $"Assets/_Game/UI/Pickup Frame/{pickupType}.png";
         Sprite sprite = AssetDatabase.LoadAssetAtPath<Sprite>(path);
-
-        if (sprite == null)
-        {
-            Debug.LogError($"GetSprite: No image found at {path}");
-        }
 
         return sprite;
     }
