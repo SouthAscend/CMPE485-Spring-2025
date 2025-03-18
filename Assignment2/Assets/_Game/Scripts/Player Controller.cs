@@ -13,6 +13,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform playerTransform;
     [SerializeField] private float lavaDamage = 1f;
     [SerializeField] private float lavaSpeedFactor = 0.5f;
+    [SerializeField] private GameObject prefab;
+    [SerializeField] private Door door;
+    private bool bCheckpointAvailable = false;
+    private Transform checkpointTransform;
+    private GameObject checkpointObject;
+
 
     private float maxSpeed = 3f;
     private Health health;
@@ -48,6 +54,11 @@ public class PlayerController : MonoBehaviour
         CooldownController.navigator_active = Input.GetKey(KeyCode.E);
 
         if (!CooldownController.navigator_active) CooldownController.Cooldown();
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            LoadCheckpoint();
+        }
     }
 
     void ApplyMovement()
@@ -95,6 +106,42 @@ public class PlayerController : MonoBehaviour
         health.Damage(damage);
     }
 
+    private void DropCheckpoint()
+    {
+        Quaternion rotatedY = transform.rotation * Quaternion.Euler(0, 180, 0);
+
+        checkpointObject = Instantiate(prefab, transform.position, rotatedY);
+        bCheckpointAvailable = true;
+
+        checkpointTransform = new GameObject("CheckpointTransform").transform;
+        checkpointTransform.position = transform.position;
+        checkpointTransform.rotation = rotatedY;
+
+        StaticVariables.DroppedCheckpoint();
+    }
+
+    private void LoadCheckpoint()
+    {
+        if (!bCheckpointAvailable) return;
+        transform.position = checkpointTransform.position;
+        transform.rotation = checkpointTransform.rotation;
+        bCheckpointAvailable = false;
+        Destroy(checkpointObject);
+
+        if (StaticVariables.checkpoint_lava)
+        {
+            door.GoLava();
+        }
+        else if (StaticVariables.checkpoint_ice)
+        {
+            door.GoIce();
+        }
+        else
+        {
+            door.GoNormal();
+        }
+    }
+
     public void ApplyPickup(int slot)
     {
         ParentPickup pickup = PickupInventory.GetPickup(slot);
@@ -128,6 +175,10 @@ public class PlayerController : MonoBehaviour
 
             case "Invincible":
                 StartCoroutine(health.InvincibilityPickup());
+                break;
+
+            case "Checkpoint":
+                DropCheckpoint();
                 break;
             
             default:
