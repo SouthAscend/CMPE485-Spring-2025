@@ -43,6 +43,10 @@ public class PlayerController : MonoBehaviour
                 ApplyPickup(i);
             }
         }
+
+        CooldownController.navigator_active = Input.GetKey(KeyCode.E);
+
+        if (!CooldownController.navigator_active) CooldownController.Cooldown();
     }
 
     void ApplyMovement()

@@ -6,6 +6,7 @@ public class InvisibleNavigator : MonoBehaviour
     private MeshRenderer targetMesh;
     private Coroutine fadeCoroutine;
     private int collided = 0;
+    private bool isFading = false;
 
     void Start()
     {
@@ -25,17 +26,36 @@ public class InvisibleNavigator : MonoBehaviour
             Debug.LogError($"InvisibleNavigator: No matching mesh found for {gameObject.name}");
     }
 
+    void Update()
+    {
+        if (collided > 0 && CooldownController.currentCD > 0.01f)
+        {
+            if (CooldownController.navigator_active) CooldownController.Drain();
+            if (CooldownController.navigator_active && !isFading)
+            {
+                Debug.Log(CooldownController.currentCD);
+                if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
+                fadeCoroutine = StartCoroutine(FadeVisibility(1f, 0.1f)); // Fade In
+                isFading = true;
+            }
+            else if (!CooldownController.navigator_active && isFading)
+            {
+                if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
+                fadeCoroutine = StartCoroutine(FadeVisibility(0f, 0.1f)); // Fade Out
+                isFading = false;
+            }
+        }
+        else if (CooldownController.currentCD <= 0.01f && isFading)
+        {
+            NoMesh();
+        }
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("InvisibleFloor") && targetMesh != null)
         {
             collided++;
-
-            if (collided == 1)
-            {
-                if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
-                fadeCoroutine = StartCoroutine(FadeVisibility(1f, 0.1f)); // Fade In
-            }
         }
     }
 
@@ -46,10 +66,17 @@ public class InvisibleNavigator : MonoBehaviour
             collided--;
             if (collided == 0)
             {
-                if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
-                fadeCoroutine = StartCoroutine(FadeVisibility(0f, 0.1f)); // Fade Out
+                NoMesh();
             }
         }
+    }
+
+    void NoMesh()
+    {
+        if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
+        fadeCoroutine = StartCoroutine(FadeVisibility(0f, 0.1f)); // Fade Out
+        isFading = false;
+        Debug.Log("AAAAAA");
     }
 
     IEnumerator FadeVisibility(float endAlpha, float duration)

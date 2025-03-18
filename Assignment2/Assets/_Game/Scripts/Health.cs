@@ -7,11 +7,11 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private float maxHealth = 100f;
     [SerializeField] private float regenerationFactor = 5f;
-    [SerializeField] private Slider healthSlider;
-    [SerializeField] private RectTransform fillRect;
+    [SerializeField] private RectTransform fullBarRect;
+    [SerializeField] private RectTransform healthBarRect;
 
-    private float currentHealth = 100f;
-    bool bCanRegenerate = false;
+    private float currentHealth;
+    private bool bCanRegenerate = false;
 
     void Start()
     {
@@ -39,8 +39,7 @@ public class Health : MonoBehaviour
     {
         maxHealth *= 1.1f;
         currentHealth *= 1.1f;
-        RectTransform sliderRect = healthSlider.GetComponent<RectTransform>();
-        sliderRect.sizeDelta = new Vector2(sliderRect.sizeDelta.x * 1.1f, sliderRect.sizeDelta.y);
+        fullBarRect.localScale = new Vector3(fullBarRect.localScale.x * 1.1f, fullBarRect.localScale.y, fullBarRect.localScale.z);
         UpdateHealthUI();
     }
 
@@ -67,11 +66,12 @@ public class Health : MonoBehaviour
 
     void Lose()
     {
-
+        // Define lose behavior here
     }
 
     void UpdateHealthUI()
     {
-        fillRect.localScale = new Vector3(currentHealth / maxHealth * 1.1f, fillRect.localScale.y, fillRect.localScale.z);
+        float healthRatio = currentHealth / maxHealth;
+        healthBarRect.localScale = new Vector3(healthRatio, healthBarRect.localScale.y, healthBarRect.localScale.z);
     }
 }
