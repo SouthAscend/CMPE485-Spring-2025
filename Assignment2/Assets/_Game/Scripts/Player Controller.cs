@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
         cameraTransform.localRotation = Quaternion.Euler(0f, 0f, 0f);
         maxSpeed = maxWalkingSpeed;
         health = GetComponent<Health>();
+        CooldownController.UpdateUI();
     }
 
     void FixedUpdate()
@@ -115,6 +116,10 @@ public class PlayerController : MonoBehaviour
 
             case "Faster Regen":
                 health.BoostRegeneration();
+                break;
+
+            case "More Seeing":
+                CooldownController.MorePickup();
                 break;
 
             default:

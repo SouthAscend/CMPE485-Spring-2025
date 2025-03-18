@@ -36,4 +36,12 @@ public static class CooldownController
         cdBarRect.localScale = new Vector3(ratio, cdBarRect.localScale.y, cdBarRect.localScale.z);
     }
 
+    public static void MorePickup()
+    {
+        maxCD *= 1.1f;
+        currentCD *= 1.1f;
+        fullBarRect.localScale = new Vector3(fullBarRect.localScale.x * 1.1f, fullBarRect.localScale.y, fullBarRect.localScale.z);
+        UpdateUI();
+    }
+
 }
