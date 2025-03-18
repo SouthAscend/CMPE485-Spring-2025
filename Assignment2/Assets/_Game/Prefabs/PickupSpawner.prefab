@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1295875568576675049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7889380135973927057}
+  - component: {fileID: 6482036519774377980}
+  m_Layer: 0
+  m_Name: PickupSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7889380135973927057
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295875568576675049}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6, y: 1, z: -2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6482036519774377980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295875568576675049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1578680116b2b940b084c63e7832d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupPrefabs:
+  - {fileID: 1474654032534953833, guid: 38edd8241779966408302acf470c806a, type: 3}
+  - {fileID: 1474654032534953833, guid: 8c4ce2606bc34424faba678a82b3c10d, type: 3}
+  - {fileID: 1474654032534953833, guid: 1cbd3643552bf1741a28a03cf3dfe7a5, type: 3}
+  - {fileID: 1474654032534953833, guid: cdf4bfad62b872f4ebd026cb42658c10, type: 3}
+  - {fileID: 1474654032534953833, guid: 3b622e0eb311bc54a89dda37d21f8f36, type: 3}
+  - {fileID: 1474654032534953833, guid: 9b1003d989039f04b90fe4a0a1e4291e, type: 3}
+  - {fileID: 1474654032534953833, guid: ee121231196fe1a4fbf77f88fdc4a05f, type: 3}
+  probabilities:
+  - 5
+  - 10
+  - 10
+  - 50
+  - 5
+  - 10
+  - 10
