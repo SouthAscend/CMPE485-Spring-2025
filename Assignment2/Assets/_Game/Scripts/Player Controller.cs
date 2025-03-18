@@ -109,6 +109,10 @@ public class PlayerController : MonoBehaviour
                 health.MaxHpPickup();
                 break;
 
+            case "Faster Regen":
+                health.BoostRegeneration();
+                break;
+
             default:
                 break;
         }       

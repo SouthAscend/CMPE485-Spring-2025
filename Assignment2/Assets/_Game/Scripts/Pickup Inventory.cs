@@ -15,7 +15,7 @@ public static class PickupInventory
         {
             if (pickups[i].pickupType.Equals(pickupType))
             {
-                index = i; 
+                index = i;
                 break;
             }
         }
