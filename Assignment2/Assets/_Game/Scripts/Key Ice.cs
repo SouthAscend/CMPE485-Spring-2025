@@ -8,7 +8,7 @@ public class KeyIce : MonoBehaviour
     {
         if (other.CompareTag("IceKey"))
         {
-            StaticVariables.ice_key = true;
+            StaticVariables.PushedIceKey();
             Destroy(other.gameObject);
             Destroy(gameObject);
             return;

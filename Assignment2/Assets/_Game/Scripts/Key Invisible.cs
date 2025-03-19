@@ -8,7 +8,7 @@ public class KeyInvisible : MonoBehaviour
     {
         if (other.CompareTag("InvisibleKey"))
         {
-            StaticVariables.invisible_key = true;
+            StaticVariables.PushedInvisibleKey();
             Destroy(other.gameObject);
             Destroy(gameObject);
             return;

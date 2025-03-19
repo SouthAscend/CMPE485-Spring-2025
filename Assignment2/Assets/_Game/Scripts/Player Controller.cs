@@ -15,6 +15,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float lavaSpeedFactor = 0.5f;
     [SerializeField] private GameObject prefab;
     [SerializeField] private Door door;
+    [SerializeField] private Material lavaKeyMaterial;
+    [SerializeField] private Material iceKeyMaterial;
+    [SerializeField] private Material invisibleKeyMaterial;
     private bool bCheckpointAvailable = false;
     private Transform checkpointTransform;
     private GameObject checkpointObject;
@@ -118,6 +121,54 @@ public class PlayerController : MonoBehaviour
         checkpointTransform.rotation = rotatedY;
 
         StaticVariables.DroppedCheckpoint();
+    }
+
+    public void Win()
+    {
+        GameObject door = GameObject.Find("Final_Door");
+        StartCoroutine(LowerDoor(door));
+    }
+
+    IEnumerator LowerDoor(GameObject door)
+    {
+        while (door.transform.position.y > -2.1f)
+        {
+            door.transform.position = new Vector3(0f, door.transform.position.y - Time.deltaTime * 2.1f, 0f);
+            yield return null;
+        }
+    }
+
+    public void ChangeKeyMaterial(string objectPath, string source)
+    {
+        GameObject keyslot = GameObject.Find(objectPath);
+
+        if (keyslot != null && keyslot.TryGetComponent(out MeshRenderer renderer))
+        {
+            Material newMaterial = null;
+            switch (source)
+            {
+                case "lava":
+                    newMaterial = lavaKeyMaterial;
+                    break;
+
+                case "ice":
+                    newMaterial = iceKeyMaterial;
+                    break;
+
+                case "invisible":
+                    newMaterial = invisibleKeyMaterial;
+                    break;
+
+                default:
+                    break;
+            }
+
+            renderer.material = newMaterial;
+        }
+        else
+        {
+            Debug.LogError($"Key object not found: {objectPath}");
+        }
     }
 
     private void LoadCheckpoint()

@@ -8,7 +8,7 @@ public class KeyLava : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            StaticVariables.lava_key = true;
+            StaticVariables.ObtainedLavaKey();
             Destroy(gameObject);
             return;
         }

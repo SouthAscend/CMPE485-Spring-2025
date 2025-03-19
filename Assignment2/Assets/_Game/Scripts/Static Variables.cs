@@ -22,4 +22,41 @@ public static class StaticVariables
         checkpoint_ice = player_ice;
         checkpoint_lava = player_lava;
     }
+
+    public static void ObtainedLavaKey()
+    {
+        lava_key = true;
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        PlayerController pc = player.GetComponent<PlayerController>();
+        pc.ChangeKeyMaterial("Final_Door/Cube2/Sphere", "lava");
+        CheckWin();
+    }
+
+    public static void PushedIceKey()
+    {
+        ice_key = true;
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        PlayerController pc = player.GetComponent<PlayerController>();
+        pc.ChangeKeyMaterial("Final_Door/Cube4/Sphere", "ice");
+        CheckWin();
+    }
+
+    public static void PushedInvisibleKey()
+    {
+        invisible_key = true;
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        PlayerController pc = player.GetComponent<PlayerController>();
+        pc.ChangeKeyMaterial("Final_Door/Cube1/Sphere", "invisible");
+        CheckWin();
+    }
+
+    static void CheckWin()
+    {
+        if (lava_key && ice_key && invisible_key)
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            PlayerController pc = player.GetComponent<PlayerController>();
+            pc.Win();
+        }
+    }
 }
