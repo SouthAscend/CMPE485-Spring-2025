@@ -9,6 +9,7 @@ TagManager:
   - LavaDoor
   - IceKey
   - InvisibleFloor
+  - InvisibleKey
   layers:
   - Default
   - TransparentFX

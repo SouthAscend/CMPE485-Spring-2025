@@ -8,6 +8,7 @@ public static class StaticVariables
     public static bool ice_semi_key = false;
     public static bool lava_key = false;
     public static bool ice_key = false;
+    public static bool invisible_key = false;
     public static bool checkpoint_normal = false;
     public static bool checkpoint_ice = false;
     public static bool checkpoint_lava = false;
