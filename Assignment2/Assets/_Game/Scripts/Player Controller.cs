@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
@@ -18,31 +19,44 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Material lavaKeyMaterial;
     [SerializeField] private Material iceKeyMaterial;
     [SerializeField] private Material invisibleKeyMaterial;
+    [SerializeField] private GameObject winUI;
+    [SerializeField] private GameObject loseUI;
+    [SerializeField] private GameObject replayButton;
+    [SerializeField] private GameObject quitButton;
     private bool bCheckpointAvailable = false;
     private Transform checkpointTransform;
     private GameObject checkpointObject;
 
-
     private float maxSpeed = 3f;
     private Health health;
 
+    private bool bGameEnded = false;
+
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        UnityEngine.Cursor.lockState = CursorLockMode.Locked;
+        UnityEngine.Cursor.visible = false;
         cameraTransform.localRotation = Quaternion.Euler(0f, 0f, 0f);
         maxSpeed = maxWalkingSpeed;
         health = GetComponent<Health>();
         CooldownController.UpdateUI();
+        winUI.SetActive(false);
+        loseUI.SetActive(false);
+        replayButton.SetActive(false);
+        quitButton.SetActive(false);
     }
 
     void FixedUpdate()
     {
+        if (bGameEnded) return;
+
         ApplyMovement();
     }
 
     void Update()
     {
+        if (bGameEnded) return;
+
         ApplyRotation();
         UpdateMaxSpeed();
 
@@ -129,13 +143,42 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(LowerDoor(door));
     }
 
+    private void Won()
+    {
+        StaticVariables.ResetVariables();
+        PickupInventory.ResetVariables();
+        Message.UpdateMessage("");
+        bGameEnded = true;
+
+        winUI.SetActive(true);
+        replayButton.SetActive(true);
+        quitButton.SetActive(true);
+        UnityEngine.Cursor.lockState = CursorLockMode.None;
+        UnityEngine.Cursor.visible = true;
+    }
+
+    public void Lost()
+    {
+        StaticVariables.ResetVariables();
+        PickupInventory.ResetVariables();
+        Message.UpdateMessage("");
+        bGameEnded = true;
+
+        loseUI.SetActive(true);
+        replayButton.SetActive(true);
+        quitButton.SetActive(true);
+        UnityEngine.Cursor.lockState = CursorLockMode.None;
+        UnityEngine.Cursor.visible = true;
+    }
+
     IEnumerator LowerDoor(GameObject door)
     {
-        while (door.transform.position.y > -2.1f)
+        while (door.transform.position.y > -2.5f)
         {
-            door.transform.position = new Vector3(0f, door.transform.position.y - Time.deltaTime * 2.1f, 0f);
+            door.transform.position = new Vector3(0f, door.transform.position.y - Time.deltaTime * 2.5f, 0f);
             yield return null;
         }
+        Won();
     }
 
     public void ChangeKeyMaterial(string objectPath, string source)

@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
     [SerializeField] private float regenerationFactor = 5f;
     [SerializeField] private RectTransform fullBarRect;
     [SerializeField] private RectTransform healthBarRect;
+    [SerializeField] private PlayerController pc;
 
     private float currentHealth;
     private bool bCanRegenerate = false;
@@ -51,7 +52,7 @@ public class Health : MonoBehaviour
         if (currentHealth < 0)
         {
             currentHealth = 0;
-            Lose();
+            pc.Lost();
         }
         UpdateHealthUI();
     }
@@ -64,11 +65,6 @@ public class Health : MonoBehaviour
     public void BoostRegeneration()
     {
         regenerationFactor *= 1.05f;
-    }
-
-    void Lose()
-    {
-        // Define lose behavior here
     }
 
     void UpdateHealthUI()

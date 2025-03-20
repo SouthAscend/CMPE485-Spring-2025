@@ -8,6 +8,11 @@ public static class PickupInventory
 {
     static public List<ParentPickup> pickups = new List<ParentPickup>();
 
+    public static void ResetVariables()
+    {
+        pickups = new List<ParentPickup>();
+    }
+
     public static void NewPickup(string pickupType)
     {
         int index = -1;
