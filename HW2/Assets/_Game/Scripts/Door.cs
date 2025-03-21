@@ -67,5 +67,6 @@ public class Door : MonoBehaviour
         StaticVariables.player_lava = true;
         StaticVariables.player_normal = false;
         StaticVariables.player_ice = false;
+        rb.mass = 1f;
     }
 }

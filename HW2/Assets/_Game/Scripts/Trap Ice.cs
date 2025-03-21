@@ -9,7 +9,7 @@ public class TrapIce : MonoBehaviour
 
     IEnumerator OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("Player") && !health.bInvincible)
         {
             yield return new WaitForSeconds(0.1f);
             float forceMagnitude = Random.Range(25f, 45f);

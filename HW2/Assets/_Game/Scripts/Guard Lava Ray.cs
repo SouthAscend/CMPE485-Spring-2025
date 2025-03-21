@@ -5,12 +5,13 @@ using UnityEngine;
 public class GuardLavaRay : MonoBehaviour
 {
     [SerializeField] Rigidbody rb;
+    [SerializeField] Health health;
 
     bool bActive = false;
 
     void Update()
     {
-        if (bActive && rb.velocity.magnitude > 0.15f)
+        if (bActive && rb.velocity.magnitude > 0.15f && !health.bInvincible)
         {
             rb.mass = 10000f;
         }

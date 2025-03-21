@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject replayButton;
     [SerializeField] private GameObject quitButton;
     [SerializeField] private List<Message> messages;
+    [SerializeField] private GameObject Controls;
     private bool bCheckpointAvailable = false;
     private Transform checkpointTransform;
     private GameObject checkpointObject;
@@ -45,6 +46,7 @@ public class PlayerController : MonoBehaviour
         loseUI.SetActive(false);
         replayButton.SetActive(false);
         quitButton.SetActive(false);
+        Controls.SetActive(false);
     }
 
     void FixedUpdate()
@@ -76,6 +78,14 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             LoadCheckpoint();
+        }
+
+        if (Input.GetKey(KeyCode.Tab))
+        {
+            Controls.SetActive(true);
+        } else
+        {
+            Controls.SetActive(false);
         }
     }
 

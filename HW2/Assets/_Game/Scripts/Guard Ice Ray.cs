@@ -19,7 +19,7 @@ public class GuardIceRay : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !health.bInvincible)
         {
             bActive = true;
             rb.mass = 1f;

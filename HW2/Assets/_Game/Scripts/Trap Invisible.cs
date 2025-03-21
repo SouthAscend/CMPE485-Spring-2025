@@ -10,12 +10,14 @@ public class TrapInvisible : MonoBehaviour
     private MeshRenderer meshRenderer;
     private bool bActive = false;
     private float radius = 1.5f;
+    private Health health;
 
     void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
         SphereCollider sphereCollider = GetComponent<SphereCollider>();
         radius = sphereCollider.radius * Mathf.Max(transform.lossyScale.x, transform.lossyScale.y, transform.lossyScale.z);
+        health = playerTransform.GetComponent<Health>();
 
         SetVisibility(0f); // Start invisible
     }
@@ -28,9 +30,9 @@ public class TrapInvisible : MonoBehaviour
             Vector3 playerPos = new Vector3(playerTransform.position.x, 0f, playerTransform.position.z);
 
             float distance = Vector3.Distance(objectPos, playerPos);
-            float visibilityRate = Mathf.Clamp01((radius - distance - 0.15f) / (radius - 0.15f));
+            float visibilityRate = Mathf.Clamp01((radius - distance - 0.3f) / (radius - 0.3f));
 
-            if (distance < 0.15f)
+            if (distance < 0.3f && !health.bInvincible)
             {
                 visibilityRate = 0f;
                 bActive = false;

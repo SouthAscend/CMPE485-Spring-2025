@@ -258,8 +258,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 0
     - __dirty: 1
-    - _metalic: 0.5
-    - _smoothness: 1
+    - _metalic: 1
+    - _smoothness: 0
     m_Colors:
     - _BASE_COLOR: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}

@@ -13,7 +13,7 @@ public class Health : MonoBehaviour
 
     private float currentHealth;
     private bool bCanRegenerate = false;
-    private bool bInvincible = false;
+    public bool bInvincible = false;
 
     void Start()
     {
