@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject loseUI;
     [SerializeField] private GameObject replayButton;
     [SerializeField] private GameObject quitButton;
+    [SerializeField] private List<Message> messages;
     private bool bCheckpointAvailable = false;
     private Transform checkpointTransform;
     private GameObject checkpointObject;
@@ -147,7 +148,10 @@ public class PlayerController : MonoBehaviour
     {
         StaticVariables.ResetVariables();
         PickupInventory.ResetVariables();
-        Message.UpdateMessage("");
+        foreach (Message msg in messages)
+        {
+            msg.DeleteMessage();
+        }
         bGameEnded = true;
 
         winUI.SetActive(true);
@@ -161,7 +165,10 @@ public class PlayerController : MonoBehaviour
     {
         StaticVariables.ResetVariables();
         PickupInventory.ResetVariables();
-        Message.UpdateMessage("");
+        foreach (Message msg in messages)
+        {
+            msg.DeleteMessage();
+        }
         bGameEnded = true;
 
         loseUI.SetActive(true);

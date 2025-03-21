@@ -3612,6 +3612,70 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 366372301c9237d4eb73b9e2bb82929f, type: 3}
+--- !u!1001 &73679469
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3746487060306571910, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: message
+      value: You're about the encounter the guard. The guard won't be able to detect
+        you if you don't move. If guard detects you, it's ray will make you about
+        a thousand times heavier. Since the movements are force based, if you're
+        that much heavier you practically won't be able to move.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3779331055973307268, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_Name
+      value: Message (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -42
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
 --- !u!1 &84240712
 GameObject:
   m_ObjectHideFlags: 0
@@ -5483,6 +5547,74 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1001 &155144623
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3746487060306571910, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: message
+      value: This is the invisible segment. There are no walls, if you go too far
+        in any direction, you'll most likely fall. When you fall you just get teleported
+        back while taking a serious damage. You have a navigation helper that is
+        activated with 'E'. When you progress, new diamonds will appear on places
+        you already visited with a small delay. There are some traps that gets activated
+        if you get too close to them. Traps also teleport you. If you get teleported
+        via a trap, every progress will be lost. You'll be required to explore this
+        maze again. More detailed explanation is in my report.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3779331055973307268, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_Name
+      value: Message (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
 --- !u!1001 &156753975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5771,6 +5903,76 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6749515433586296231, guid: 366372301c9237d4eb73b9e2bb82929f, type: 3}
   m_PrefabInstance: {fileID: 161565119}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &164754427
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3746487060306571910, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: message
+      value: There are pickups all over the map. You can activate them with their
+        corresponding number key. Detail on each pickup is in my report.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3779331055973307268, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_Name
+      value: Message (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756130861819484470, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_Size.x
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756130861819484470, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_Size.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
 --- !u!1 &165661087
 GameObject:
   m_ObjectHideFlags: 0
@@ -7252,6 +7454,82 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 366372301c9237d4eb73b9e2bb82929f, type: 3}
+--- !u!1001 &224533811
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3746487060306571910, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: message
+      value: This guard is different from others. It doesn't move. It only detects
+        you if you don't avert your eyes from it. You should look at the exact direction
+        the guard is looking when you're walking in front of him. Other guards in
+        this segment work with the same logic.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3779331055973307268, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_Name
+      value: Message (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756130861819484470, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_Size.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756130861819484470, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_Size.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756130861819484470, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_Size.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 40.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
 --- !u!1 &228704925
 GameObject:
   m_ObjectHideFlags: 0
@@ -12026,7 +12304,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 363675643}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 0fd03949eebda3649819573d7ce934d0, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -27085,6 +27363,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b1fa6ef2da172f4db96e51218f6dc50, type: 3}
+--- !u!114 &802673276 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3746487060306571910, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+  m_PrefabInstance: {fileID: 164754427}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fc3f031d7db87541b1eef15cc6fb222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &805352269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37926,6 +38215,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd5d627c35a9a4a408162ae27de20530, type: 3}
+--- !u!114 &1062623108 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3746487060306571910, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+  m_PrefabInstance: {fileID: 73679469}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fc3f031d7db87541b1eef15cc6fb222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1065560607
 GameObject:
   m_ObjectHideFlags: 0
@@ -39803,6 +40103,131 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 366372301c9237d4eb73b9e2bb82929f, type: 3}
+--- !u!1001 &1106815144
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3746487060306571910, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: message
+      value: You picked up and activated this key. Others are not as easy.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3779331055973307268, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_Name
+      value: Message (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -39
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 69.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+--- !u!1001 &1107740010
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3746487060306571910, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: message
+      value: You're about to encounter the ice guard. You need to run from him at
+        all costs. If he sees you, he'll make you a lot lighter. You won't be able
+        to control how you move in the ice segment. Exiting and reentering should
+        make you normal but it will be difficult. The guard will also damage you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3779331055973307268, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_Name
+      value: Message (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -51
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
 --- !u!1001 &1108520491
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41256,6 +41681,70 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd5d627c35a9a4a408162ae27de20530, type: 3}
+--- !u!1001 &1131985753
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3746487060306571910, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: message
+      value: You're about to encounter the ice guard. You need to run from him at
+        all costs. If he sees you, he'll make you a lot lighter. You won't be able
+        to control how you move in the ice segment. Exiting and reentering should
+        make you normal but it will be difficult. The guard will also damage you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3779331055973307268, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_Name
+      value: Message (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
 --- !u!1001 &1133948023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51435,6 +51924,28 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 366372301c9237d4eb73b9e2bb82929f, type: 3}
+--- !u!114 &1439143746 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3746487060306571910, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+  m_PrefabInstance: {fileID: 1131985753}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fc3f031d7db87541b1eef15cc6fb222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1447210902 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3746487060306571910, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+  m_PrefabInstance: {fileID: 1488885741}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fc3f031d7db87541b1eef15cc6fb222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1448862552
 GameObject:
   m_ObjectHideFlags: 0
@@ -52528,6 +53039,68 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 366372301c9237d4eb73b9e2bb82929f, type: 3}
+--- !u!1001 &1488885741
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3746487060306571910, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: message
+      value: This is the ice segment. Floor is slippery. Your max spped is increased.
+        Traps will throw you in a random direction, random magnitude.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3779331055973307268, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_Name
+      value: Message (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
 --- !u!1001 &1493548396
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54092,6 +54665,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1554119995}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1558811956 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3746487060306571910, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+  m_PrefabInstance: {fileID: 2107201094}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fc3f031d7db87541b1eef15cc6fb222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1560661261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54528,6 +55112,19 @@ MonoBehaviour:
   loseUI: {fileID: 1494232407}
   replayButton: {fileID: 1220064223}
   quitButton: {fileID: 562085283}
+  messages:
+  - {fileID: 2122772932}
+  - {fileID: 1558811956}
+  - {fileID: 1062623108}
+  - {fileID: 1447210902}
+  - {fileID: 1849926101}
+  - {fileID: 1943146964}
+  - {fileID: 1439143746}
+  - {fileID: 2041061940}
+  - {fileID: 1876838992}
+  - {fileID: 1586435990}
+  - {fileID: 2081036591}
+  - {fileID: 802673276}
 --- !u!54 &1570912425
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -54694,6 +55291,81 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 366372301c9237d4eb73b9e2bb82929f, type: 3}
+--- !u!1001 &1584311680
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3746487060306571910, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: message
+      value: You need to push this key to it's slot on the center piece. You can
+        technically push it the long way, but it will be tedious. There is a half-key
+        in the maze. If you obtain that, the green wall should descend and you should
+        be able to push the key using the shortcut..
+      objectReference: {fileID: 0}
+    - target: {fileID: 3779331055973307268, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_Name
+      value: Message (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -42
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+--- !u!114 &1586435990 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3746487060306571910, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+  m_PrefabInstance: {fileID: 224533811}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fc3f031d7db87541b1eef15cc6fb222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1587007703
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59517,6 +60189,80 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd5d627c35a9a4a408162ae27de20530, type: 3}
+--- !u!1001 &1680558378
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3746487060306571910, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: message
+      value: You need to push this key to it's slot in the center piece. If you push
+        it off the border and cause it to drop, you'll lose the game.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3779331055973307268, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_Name
+      value: Message (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756130861819484470, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_Size.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756130861819484470, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_Size.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756130861819484470, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_Size.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 32.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -18.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
 --- !u!1001 &1682661144
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66299,6 +67045,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1849585012}
   m_Mesh: {fileID: 4300000, guid: 78ffc1ed5f72076498d0614872cf48ec, type: 3}
+--- !u!114 &1849926101 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3746487060306571910, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+  m_PrefabInstance: {fileID: 1106815144}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fc3f031d7db87541b1eef15cc6fb222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1850030263
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67564,6 +68321,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd5d627c35a9a4a408162ae27de20530, type: 3}
+--- !u!114 &1876838992 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3746487060306571910, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+  m_PrefabInstance: {fileID: 155144623}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fc3f031d7db87541b1eef15cc6fb222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1877279300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70342,6 +71110,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b1fa6ef2da172f4db96e51218f6dc50, type: 3}
+--- !u!114 &1943146964 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3746487060306571910, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+  m_PrefabInstance: {fileID: 1584311680}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fc3f031d7db87541b1eef15cc6fb222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1944500125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73752,6 +74531,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7035547295919706374, guid: bd5d627c35a9a4a408162ae27de20530, type: 3}
   m_PrefabInstance: {fileID: 2038606741}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2041061940 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3746487060306571910, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+  m_PrefabInstance: {fileID: 1107740010}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fc3f031d7db87541b1eef15cc6fb222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2041381751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -74926,6 +75716,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 20, y: 4, z: 40}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2081036591 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3746487060306571910, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+  m_PrefabInstance: {fileID: 1680558378}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fc3f031d7db87541b1eef15cc6fb222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2082584038
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75153,6 +75954,7 @@ GameObject:
   - component: {fileID: 2088972970}
   - component: {fileID: 2088972968}
   - component: {fileID: 2088972973}
+  - component: {fileID: 2088972974}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: InvisibleKey
@@ -75278,6 +76080,19 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.525
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2088972974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088972967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36278e341a2315d418f9e2de8acd2702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pc: {fileID: 1570912424}
 --- !u!1001 &2090998129
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75786,63 +76601,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b1fa6ef2da172f4db96e51218f6dc50, type: 3}
---- !u!1001 &2096791109
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1474654032534953833, guid: 38edd8241779966408302acf470c806a, type: 3}
-      propertyPath: m_Name
-      value: Pickup_Checkpoint
-      objectReference: {fileID: 0}
-    - target: {fileID: 6068370133926663026, guid: 38edd8241779966408302acf470c806a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.0261974
-      objectReference: {fileID: 0}
-    - target: {fileID: 6068370133926663026, guid: 38edd8241779966408302acf470c806a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6068370133926663026, guid: 38edd8241779966408302acf470c806a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6.379425
-      objectReference: {fileID: 0}
-    - target: {fileID: 6068370133926663026, guid: 38edd8241779966408302acf470c806a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6068370133926663026, guid: 38edd8241779966408302acf470c806a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6068370133926663026, guid: 38edd8241779966408302acf470c806a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6068370133926663026, guid: 38edd8241779966408302acf470c806a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6068370133926663026, guid: 38edd8241779966408302acf470c806a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6068370133926663026, guid: 38edd8241779966408302acf470c806a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6068370133926663026, guid: 38edd8241779966408302acf470c806a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 38edd8241779966408302acf470c806a, type: 3}
 --- !u!1001 &2097371605
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76096,6 +76854,70 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 366372301c9237d4eb73b9e2bb82929f, type: 3}
+--- !u!1001 &2107201094
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3746487060306571910, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: message
+      value: You're about the encounter the guard. The guard won't be able to detect
+        you if you don't move. If guard detects you, it's ray will make you about
+        a thousand times heavier. Since the movements are force based, if you're
+        that much heavier you practically won't be able to move.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3779331055973307268, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_Name
+      value: Message (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -33
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
 --- !u!1001 &2108335524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76641,6 +77463,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122382836}
   m_CullTransparentMesh: 0
+--- !u!114 &2122772932 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3746487060306571910, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+  m_PrefabInstance: {fileID: 8609093786377880112}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fc3f031d7db87541b1eef15cc6fb222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2124781408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77757,6 +78590,69 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 366372301c9237d4eb73b9e2bb82929f, type: 3}
+--- !u!1001 &8609093786377880112
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3746487060306571910, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: message
+      value: This is the lava segment. The floor will always damage you. Slower you
+        are, more damage you get. If traps collide with you, they significantly damage
+        you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3779331055973307268, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_Name
+      value: Message
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894410519377844489, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8f20632575e98e546ae250d55e3bdc7a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -78319,7 +79215,18 @@ SceneRoots:
   - {fileID: 1667288011}
   - {fileID: 1071735357}
   - {fileID: 342922444}
-  - {fileID: 2096791109}
   - {fileID: 1795883800}
   - {fileID: 672425069}
   - {fileID: 647096484}
+  - {fileID: 8609093786377880112}
+  - {fileID: 164754427}
+  - {fileID: 2107201094}
+  - {fileID: 73679469}
+  - {fileID: 1488885741}
+  - {fileID: 1106815144}
+  - {fileID: 1584311680}
+  - {fileID: 1131985753}
+  - {fileID: 1107740010}
+  - {fileID: 155144623}
+  - {fileID: 224533811}
+  - {fileID: 1680558378}
