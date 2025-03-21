@@ -55602,6 +55602,7 @@ MonoBehaviour:
   - {fileID: 2081036591}
   - {fileID: 802673276}
   Controls: {fileID: 1890362946}
+  fireworks: {fileID: 1149625324042060, guid: 6c69b53bc916eb34f8fb8f05e6d777ca, type: 3}
 --- !u!54 &1570912425
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject quitButton;
     [SerializeField] private List<Message> messages;
     [SerializeField] private GameObject Controls;
+    [SerializeField] private GameObject fireworks;
     private bool bCheckpointAvailable = false;
     private Transform checkpointTransform;
     private GameObject checkpointObject;
@@ -151,6 +152,10 @@ public class PlayerController : MonoBehaviour
     public void Win()
     {
         GameObject door = GameObject.Find("Final_Door");
+        Instantiate(fireworks, new Vector3(-50f, -200f, -50f), Quaternion.identity);
+        Instantiate(fireworks, new Vector3(-50f, -200f, 50f), Quaternion.identity);
+        Instantiate(fireworks, new Vector3(50f, -200f, -50f), Quaternion.identity);
+        Instantiate(fireworks, new Vector3(50f, -200f, 50f), Quaternion.identity);
         StartCoroutine(LowerDoor(door));
     }
 
@@ -190,11 +195,12 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator LowerDoor(GameObject door)
     {
-        while (door.transform.position.y > -2.5f)
+        while (door.transform.position.y > -5f)
         {
-            door.transform.position = new Vector3(0f, door.transform.position.y - Time.deltaTime * 2.5f, 0f);
+            door.transform.position = new Vector3(0f, door.transform.position.y - Time.deltaTime, 0f);
             yield return null;
         }
+        yield return new WaitForSeconds(3f);
         Won();
     }
 
