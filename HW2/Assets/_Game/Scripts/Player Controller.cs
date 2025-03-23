@@ -137,6 +137,7 @@ public class PlayerController : MonoBehaviour
 
     private void DropCheckpoint()
     {
+        if (checkpointObject) Destroy(checkpointObject);
         Quaternion rotatedY = transform.rotation * Quaternion.Euler(0, 180, 0);
 
         checkpointObject = Instantiate(prefab, transform.position, rotatedY);

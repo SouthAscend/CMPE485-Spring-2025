@@ -8,17 +8,19 @@ public class GuardInvisible : MonoBehaviour
     private Transform playerTransform;
     private Vector3 guardForward;
     [SerializeField] private Teleport tp;
+    private Health health;
 
     void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player")?.transform;
+        health = playerTransform.GetComponent<Health>();
 
         guardForward = new Vector3(transform.forward.x, 0f, transform.forward.z).normalized;
     }
 
     void Update()
     {
-        if (bActive && playerTransform != null)
+        if (bActive && !health.bInvincible)
         {
             Vector3 playerForward = new Vector3(playerTransform.forward.x, 0f, playerTransform.forward.z).normalized;
 

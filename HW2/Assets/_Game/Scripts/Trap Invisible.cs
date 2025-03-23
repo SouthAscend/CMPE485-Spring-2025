@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TrapInvisible : MonoBehaviour
 {
-    [SerializeField] private Transform playerTransform;
+    private Transform playerTransform;
     [SerializeField] private Teleport tp;
 
     private MeshRenderer meshRenderer;
@@ -14,6 +14,7 @@ public class TrapInvisible : MonoBehaviour
 
     void Start()
     {
+        playerTransform = GameObject.FindGameObjectWithTag("Player")?.transform;
         meshRenderer = GetComponent<MeshRenderer>();
         SphereCollider sphereCollider = GetComponent<SphereCollider>();
         radius = sphereCollider.radius * Mathf.Max(transform.lossyScale.x, transform.lossyScale.y, transform.lossyScale.z);
@@ -24,7 +25,7 @@ public class TrapInvisible : MonoBehaviour
 
     void Update()
     {
-        if (bActive && playerTransform != null)
+        if (bActive)
         {
             Vector3 objectPos = new Vector3(transform.position.x, 0f, transform.position.z);
             Vector3 playerPos = new Vector3(playerTransform.position.x, 0f, playerTransform.position.z);
