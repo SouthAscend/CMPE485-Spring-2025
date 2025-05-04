@@ -9,6 +9,14 @@ public class InitializeMap : MonoBehaviour
 
     public void Initialize(int value)
     {
+        // Get the AI Manager component from the Map object
+        AIManager aiManager = GetComponent<AIManager>();
+        if (aiManager == null)
+        {
+            Debug.LogError("AI Manager component not found on Map object!");
+            return;
+        }
+
         // Dynamically load sprites
         Sprite rockSprite = Resources.Load<Sprite>("Images/Rock");
         Sprite paperSprite = Resources.Load<Sprite>("Images/Paper");
@@ -87,31 +95,35 @@ public class InitializeMap : MonoBehaviour
             Transform bgChild = agent.transform.Find("Background");
             SpriteRenderer typeRenderer = typeChild?.GetComponent<SpriteRenderer>();
             SpriteRenderer bgRenderer = bgChild?.GetComponent<SpriteRenderer>();
+            AgentVariables vars = agent.GetComponent<AgentVariables>();
             if (k < value)
             {
                 if (typeRenderer) typeRenderer.sprite = rockSprite;
                 if (bgRenderer) bgRenderer.color = Color.yellow;
+                vars.type = "rock";
             }
             else if (k < 2 * value)
             {
                 if (typeRenderer) typeRenderer.sprite = paperSprite;
                 if (bgRenderer) bgRenderer.color = new Color(0.6f, 1f, 0.6f); // light green
+                vars.type = "paper";
             }
             else
             {
                 if (typeRenderer) typeRenderer.sprite = scissorsSprite;
                 if (bgRenderer) bgRenderer.color = new Color(0.6f, 0.8f, 1f); // light blue
+                vars.type = "scissors";
             }
             // Randomize agent variables
             float scale = UnityEngine.Random.Range(0.8f, 1.2f);
             agent.transform.localScale = new Vector3(scale, scale, 1f);
-            AgentVariables vars = agent.GetComponent<AgentVariables>();
             if (vars != null)
             {
                 float x = UnityEngine.Random.Range(0.8f, 1.2f);
                 if (x > 1.0f) x *= 1.25f;
                 vars.speed = x;
                 vars.range = UnityEngine.Random.Range(9f, 11f);
+                vars.predatorBoost = UnityEngine.Random.Range(1.0f, 1.1f);
                 // Insert into global maps as soon as agent is created
                 if (k < value)
                     GlobalMaps.InsertAgent("rock", vars);
@@ -119,6 +131,9 @@ public class InitializeMap : MonoBehaviour
                     GlobalMaps.InsertAgent("paper", vars);
                 else
                     GlobalMaps.InsertAgent("scissors", vars);
+                
+                // Add the agent to the AI Manager's queue
+                aiManager.AddAgent(vars);
             }
         }
         // After all agents are created, print the lengths of the global maps
