@@ -8,6 +8,25 @@ public static class GlobalMaps
     public static LinkedList<AgentVariables> papers = new LinkedList<AgentVariables>();
     public static LinkedList<AgentVariables> scissors = new LinkedList<AgentVariables>();
 
+    // FPS tracking variables
+    private static float totalFrameTime = 0f;
+    private static int frameCount = 0;
+
+    public static void InitializeSimulation()
+    {
+        totalFrameTime = 0f;
+        frameCount = 0;
+    }
+
+    public static void UpdateFrameTime()
+    {
+        totalFrameTime += Time.deltaTime;
+        frameCount++;
+        if (totalFrameTime > 60f) {
+            SimulationOver();
+        }
+    }
+
     public static void InsertAgent(string type, AgentVariables agent)
     {
         LinkedList<AgentVariables> targetList = null;
@@ -70,6 +89,9 @@ public static class GlobalMaps
             if (list != null)
                 list.Remove(agent.nodeInGlobalList);
             agent.nodeInGlobalList = null;
+            if (list.Count == 0) {
+                SimulationOver();
+            }
         }
     }
 
@@ -121,5 +143,12 @@ public static class GlobalMaps
             case "scissors": return scissors;
             default: return null;
         }
+    }
+
+    private static void SimulationOver()
+    {
+        float averageFPS = frameCount / totalFrameTime;
+        Debug.Log($"Simulation Over - Average FPS: {averageFPS:F2}");
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 }

@@ -7,6 +7,11 @@ public class InitializeMap : MonoBehaviour
     [SerializeField] private GameObject agentPrefab;
     // Sprites will be loaded dynamically from Resources/Images
 
+    void Update()
+    {
+        GlobalMaps.UpdateFrameTime();
+    }
+
     public void Initialize(int value)
     {
         // Get the AI Manager component from the Map object
@@ -138,5 +143,7 @@ public class InitializeMap : MonoBehaviour
         }
         // After all agents are created, print the lengths of the global maps
         Debug.Log($"Rocks: {GlobalMaps.rocks.Count}, Papers: {GlobalMaps.papers.Count}, Scissors: {GlobalMaps.scissors.Count}");
+
+        GlobalMaps.InitializeSimulation();
     }
 }

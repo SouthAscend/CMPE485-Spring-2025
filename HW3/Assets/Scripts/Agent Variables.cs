@@ -180,6 +180,7 @@ public class AgentVariables : MonoBehaviour
         foreach (var food in foods)
         {
             food.GetEaten(type);
+            break;
         }
     }
 
@@ -256,7 +257,7 @@ public class AgentVariables : MonoBehaviour
             float[] tempMap = new float[90];
             for (int i = 0; i < 90; i++)
             {
-                tempMap[i] = visionMap[89 -i];
+                tempMap[(i + 45) % 90] = visionMap[89 - i];
             }
             visionMap = tempMap;
         }
