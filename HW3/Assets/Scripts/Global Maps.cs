@@ -11,15 +11,18 @@ public static class GlobalMaps
     // FPS tracking variables
     private static float totalFrameTime = 0f;
     private static int frameCount = 0;
+    private static bool simulationStarted = false;
 
     public static void InitializeSimulation()
     {
         totalFrameTime = 0f;
         frameCount = 0;
+        simulationStarted = true;
     }
 
     public static void UpdateFrameTime()
     {
+        if (!simulationStarted) return;
         totalFrameTime += Time.deltaTime;
         frameCount++;
         if (totalFrameTime > 60f) {

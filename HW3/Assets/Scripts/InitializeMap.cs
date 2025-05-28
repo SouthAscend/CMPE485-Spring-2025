@@ -128,6 +128,8 @@ public class InitializeMap : MonoBehaviour
                 if (x > 1.0f) x *= 1.25f;
                 vars.speed = x;
                 vars.range = UnityEngine.Random.Range(9f, 11f);
+                //vars.range = vars.range * 0.5f; // small range
+                //vars.range = vars.range * 2f; // large range
                 vars.predatorBoost = UnityEngine.Random.Range(1.0f, 1.1f);
                 // Insert into global maps as soon as agent is created
                 if (k < value)
